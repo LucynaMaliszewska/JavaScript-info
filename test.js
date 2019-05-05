@@ -1,9 +1,9 @@
 alert("Hello, World");
 
-var myName = 8;
+var links = document.getElementsByTagName("a");
 
-if (myName == 10){
-    document.write("myName is equal to 10");
-} else {
-    document.write("myName is not equal to 10");
+for (i=1; i<=links.length; i++) {
+    console.log ("this is link number" + i);
+
 }
+document.write ("all links now looped");
