@@ -16,3 +16,7 @@ var myCar4 = new Car (90, "James Bond");
 
 myCar.drive (30, 5);
 myCar3.logDriver ();
+
+var myH2 = myContentDivs[1].getElementsByTagName(h2);
+myH2[0].innerHTML = "Yo Ninjas";
+document.getElementById("page-title");
