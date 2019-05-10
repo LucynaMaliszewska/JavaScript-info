@@ -1,9 +1,15 @@
-var newLi = document.createElement("li");
+var content = document.getElementById("content");
+var button = document.getElementById("show-more");
 
-var newA = document.createElement("a");
-
-var menu = document.getElementById("main-nav").getElementsByTagName("ul")[0];
-
-menu.appendChild(newLi);
-newLi.appendChild(newA);
-newA.innerHTML = "Blog";
+button.onclick = function (){
+    if (content.className == "open"){
+        //shrink the box
+        content.className = "";
+        button.className = "Show More";
+    }
+    else {
+        //expand the box
+        content.className = "open";
+        button.innerHTML = "Show Less";
+    }
+};
