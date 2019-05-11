@@ -1,15 +1,15 @@
-var content = document.getElementById("content");
-var button = document.getElementById("show-more");
+var myForm = document.forms.myForm;
+var message = document.getElementById("message");
 
-button.onclick = function (){
-    if (content.className == "open"){
-        //shrink the box
-        content.className = "";
-        button.className = "Show More";
-    }
-    else {
-        //expand the box
-        content.className = "open";
-        button.innerHTML = "Show Less";
-    }
+myForm.onsubmit = function (){
+
+if(myForm.name.value == ""){
+message.innerHTML = "please enter a name";
+return false;
+
+}   else{
+    message.innerHTML = "";
+    return true;
+}
+
 };
